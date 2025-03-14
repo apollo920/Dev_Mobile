@@ -51,7 +51,7 @@ class _TelaSorteioState extends State<TelaSorteio> {
       });
     } else {
       setState(() {
-        nomeSorteado = 'Todos os nomes foram sorteados!';
+        nomeSorteado = 'Nenhum nome para sortear!';
       });
     }
   }
