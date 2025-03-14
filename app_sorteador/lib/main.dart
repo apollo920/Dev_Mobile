@@ -25,7 +25,7 @@ class TelaSorteio extends StatefulWidget {
 
 class _TelaSorteioState extends State<TelaSorteio> {
   // Lista de nomes pré-definida
-  final List<String> nomes = [
+  List<String> nomes = [
     'Ana',
     'Bruno',
     'Carlos',
@@ -46,6 +46,8 @@ class _TelaSorteioState extends State<TelaSorteio> {
       final indiceSorteado = random.nextInt(nomes.length);
       setState(() {
         nomeSorteado = nomes[indiceSorteado];
+        // Remove o nome sorteado da lista
+        nomes.removeAt(indiceSorteado);
       });
     } else {
       setState(() {
